@@ -19,7 +19,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <launch>
 
-  <node name="zed2_node" pkg="zed_wrapper" type="zed_wrapper_node" output="screen" required="true">
+  <include file="$(find agribot_common)/launch/machines.launch" />
+
+  <node machine="$(env OBSTACLE_DETECTION_MACHINE)" name="zed2_node" pkg="zed_wrapper" type="zed_wrapper_node" output="screen" required="true">
     <rosparam file="$(find hal_zed2)/params/zed2.yaml" command="load" />
   </node>
 </launch>
