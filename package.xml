@@ -12,6 +12,7 @@
   <build_depend>zed_wrapper</build_depend>
   <build_export_depend>zed_wrapper</build_export_depend>
   <exec_depend>zed_wrapper</exec_depend>
+  <exec_depend>agribot_common</exec_depend>
 
   <export>
 
